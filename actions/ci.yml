@@ -1,0 +1,13 @@
+name: Simple CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Step
+      run: echo "Running CI build (demo)"
