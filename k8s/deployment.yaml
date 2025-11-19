@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: surya-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: surya-app
+  template:
+    metadata:
+      labels:
+        app: surya-app
+    spec:
+      containers:
+      - name: surya-container
+        image: python:3.9
+        ports:
+        - containerPort: 5000
